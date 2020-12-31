@@ -113,12 +113,11 @@ keywords section: `*** Keywords ***`
 > loginToApp
 > 	#if we did NOT add the driver to our Python/scripts folder, otherwise we can ignore it
 > 	create webdriver chrome	executable_path="C:\drivers\chromedriver.exe"
->     open browser 	https://www.nopcommerce.com/en/demo	chrome
 >     click link	xpath://a[contains(text(),'Log in')] #get the xpath from inspection
 >     input text id:Email	pavanoltraining@gmail.com #get id from inspection
 >     input text id:Password	Test@123 #get id from inspection
 >     click element xpath://body/div[6]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/div[4]/input[1]
->     close browser #closes the browser
+>     
 >     
 > #now we can do 
 > *** Test Cases ***
